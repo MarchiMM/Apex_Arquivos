@@ -1,3 +1,4 @@
+// for
 
 // function escreverNaTela100Vezes(mensagem) {
 //     for (let i = 0; i < 100; i++) {
@@ -16,10 +17,10 @@ let idade = 17
 let email = "blabla@gmail.com"
 
 // Aspas:
-let dados1 = 'Teu nome:' + nome + '; tua idade:' + idade + '; teu email:' + email;
+let dados1 = 'Teu nome: ' + nome + '; tua idade: ' + idade + '; teu email: ' + email;
 
 // Interpolação de string (Crase):
 let dados2 = `Teu nome: ${nome}; tua idade: ${idade}; teu email: ${email}`;
 
 document.write(dados1 + '<br>');
-document.write(dados2)
+document.write(dados2);
