@@ -1,13 +1,14 @@
 // for
 
-// function escreverNaTela100Vezes(mensagem) {
-//     for (let i = 0; i < 100; i++) {
-//         document.write('<p>' + mensagem + '</p>')
-//     }
-// }
+function escreverNaTela10Vezes(mensagem) {
+    for (let i = 0; i < 10; i++) {
+        document.write('<p>' + mensagem + '</p>')
+    }
+}
 
-// escreverNaTela100Vezes('Matheus')
+escreverNaTela10Vezes('Matheus')
 
+//==================================================================================
 
 let mensagem = "Olá, boa noite!"
 document.write('<h3>' + mensagem + '</h3>')
