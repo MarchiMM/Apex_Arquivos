@@ -36,20 +36,40 @@ function dividir (numero1, numero2) {
     return numero1 / numero2;
 }
 
+// MINHA VERSÃO:
+
+// function efetuarCalculo(numero1, numero2, operacao) {
+//     let retorno = 0
+//     switch (operacao) {
+//         case '+': retorno = somar(numero1, numero2); break;
+//         case '-': retorno = subtrair(numero1, numero2); break;
+//         case '*': retorno = multiplicar(numero1, numero2); break;
+//         case '/': retorno = dividir(numero1, numero2); break;
+//         default: retorno = 'Erro. Tente novamente.'; break;
+//     }
+//     return retorno;
+// }
+
+// VERSÃO DO DIEGO:
+
 function efetuarCalculo(numero1, numero2, operacao) {
-    let resultado = 0
     switch (operacao) {
-        case '+': resultado = somar(numero1, numero2); break;
-        case '-': resultado = subtrair(numero1, numero2); break;
-        case '*': resultado = multiplicar(numero1, numero2); break;
-        case '/': resultado = dividir(numero1, numero2); break;
-        default: resultado = 'Erro. Tente novamente.'; break;
+        case '+': return somar(numero1, numero2); break;
+        case '-': return subtrair(numero1, numero2); break;
+        case '*': return multiplicar(numero1, numero2); break;
+        case '/': return dividir(numero1, numero2); break;
+        default: break;
     }
-    return resultado
 }
-
-let n1 = parseFloat(window.prompt('Informe o primeiro número'))
-let n2 = parseFloat(window.prompt('Informe o segundo número'))
-let op = window.prompt('Informe a operação: ("+"; "-"; "*"; "/")')
-
-document.write(`<h1>${efetuarCalculo(n1, n2, op)}</h1>`)
+let n1 = parseFloat(window.prompt('Informe o primeiro número'));
+let n2 = parseFloat(window.prompt('Informe o segundo número'));
+let operacaoInformadaPeloUsuario = window.prompt('Informe a operação: ("+"; "-"; "*"; "/")');
+// MINHA VERSÃO:
+// document.write(`<h1>${efetuarCalculo(n1, n2, operacaoInformadaPeloUsuario)}</h1>`)
+// VERSÃO DO DIEGO:
+let resultado = efetuarCalculo(
+    n1, 
+    n2, 
+    operacaoInformadaPeloUsuario
+);
+document.write(`<h1>Resultado: ${resultado}</h1>`);
