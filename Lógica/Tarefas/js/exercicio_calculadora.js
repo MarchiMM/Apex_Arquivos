@@ -22,3 +22,34 @@
 
     OBRIGATÓRIO: utilizar apenas uma vez o document.write()
 */
+
+function somar (numero1, numero2) {
+    return numero1 + numero2;
+}
+function subtrair (numero1, numero2) {
+    return numero1 - numero2;
+}
+function multiplicar (numero1, numero2) {
+    return numero1 * numero2;
+}
+function dividir (numero1, numero2) {
+    return numero1 / numero2;
+}
+
+function efetuarCalculo(numero1, numero2, operacao) {
+    let resultado = 0
+    switch (operacao) {
+        case '+': resultado = somar(numero1, numero2); break;
+        case '-': resultado = subtrair(numero1, numero2); break;
+        case '*': resultado = multiplicar(numero1, numero2); break;
+        case '/': resultado = dividir(numero1, numero2); break;
+        default: resultado = 'Erro. Tente novamente.'; break;
+    }
+    return resultado
+}
+
+let n1 = parseFloat(window.prompt('Informe o primeiro número'))
+let n2 = parseFloat(window.prompt('Informe o segundo número'))
+let op = window.prompt('Informe a operação: ("+"; "-"; "*"; "/")')
+
+document.write(`<h1>${efetuarCalculo(n1, n2, op)}</h1>`)

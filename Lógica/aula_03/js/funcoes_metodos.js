@@ -27,16 +27,16 @@ function calcularMediaDeTresNotas(n1, n2, n3) {
 }
 
 function obterMensagemDeConceito(media) {
-    let mensageDeConceito = '<h1>Conceito Insuficiente</h1>'
+    let mensagemDeConceito = '<h1>Conceito Insuficiente</h1>'
 
     if (media >= 9) {
-        mensageDeConceito = '<h1>Conceito A</h1>';
+        mensagemDeConceito = '<h1>Conceito A</h1>';
     } else if (media < 9 && media >= 7) {
-        mensageDeConceito = '<h1>Conceito B</h1>';
+        mensagemDeConceito = '<h1>Conceito B</h1>';
     } else if (media < 7 && media >= 5) {
-        mensageDeConceito = '<h1>Conceito C</h1>';
+        mensagemDeConceito = '<h1>Conceito C</h1>';
     }
-    return mensageDeConceito
+    return mensagemDeConceito
 }
 
 function escreverMensagemConceito(nota1, nota2, nota3) {
