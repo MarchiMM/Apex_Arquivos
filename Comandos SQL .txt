@@ -1,0 +1,28 @@
+CREATE DATABASE NOME_DA_BASE (cria determinada base de dados)
+====
+DROP DATABASE NOME_DA_BASE (exclui determinada base de dados)
+====
+USE NOME_DA_BASE (edita determinada base de dados)
+====
+CREATE TABLE PESSOA (
+    ID INT PRIMARY KEY,
+    NOME VARCHAR(100) NOT NULL,
+    IDADE INT,
+    DATA_NASCIMENTO DATE,
+    CPF VARCHAR(11) NOT NULL
+)
+(cria uma tabela com as colunas "ID", "NOME", "IDADE", "D_N" e "CPF")
+====
+DROP TABLE NOME_DA_TABELA
+====
+INSERT INTO PESSOA(ID, NOME, CPF)
+VALUES(1, MATHEUS, 11111111111)
+(insere informações à tabela)
+====
+INSERT INTO PESSOA(ID, NOME, CPF, IDADE, DATA_NASCIMENTO)
+VALUES(3 , 'DANI' , '11111222111', 40, '1980-02-18'),
+      (4, 'PEDREGUNDA', '11456711111', 40, '1980-02-18')
+====
+*  ->  significa "tudo"
+====
+SELECT * FROM PESSOA (seleciona tudo da tabela "PESSOA")
