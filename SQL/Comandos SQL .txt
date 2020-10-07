@@ -184,14 +184,14 @@ SELECT AVG(ALTURA)
 
 (informa a média das alturas da tabela)
 ==========
-SELECT	SUM(ALTURA)
+SELECT SUM(ALTURA)
   FROM PESSOA
 
 (retorna a soma de tudo que tem na coluna ALTURA)
 ==========
 SELECT *
   FROM PESSOA
-ORDER BY NOME
+ ORDER BY NOME
 
 (ordena a coluna NOME em ordem alfabética, de forma ascendente)
 ==========
