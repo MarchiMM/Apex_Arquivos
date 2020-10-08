@@ -1,0 +1,48 @@
+Para dar continuidade aos nossos estudos, vamos realizar a definição de um sistema para livraria. 
+Para esse sistema foram levantados os seguintes requisitos:
+R1 – Um livro pode possuir mais de um autor.
+R2 – Um livro deve possuir uma categoria e podem existir vários livros com a mesma categoria.
+R3 – Podem ser atribuídas várias tags para um determinado livro e uma tag pode estar associada a vários livros.
+R4 – A livraria deve possuir um cadastro de seus associados.
+R5 – Cada associado pode alugar um ou mais livros durante uma única locação.
+R6 – O valor de cada locação será definido pela quantidade de livros retirados, e todos os 
+    livros possuem o mesmo valor de locação, entretanto o valor de locação de um livro pode mudar em 
+    períodos distintos.
+R7 – Livros de mesmo isbn devem possuir um código sequencial para diferenciá-los.
+
+
+Exercicios:
+
+1)  Criar a base de dados chamada livraria
+2)  Utilizar a base de dados livraria
+3)  Criar a tabela autor
+4)  Criar a tabela categoria
+5)  Criar a tabela tag
+6)  Criar a tabela livro
+7)  Criar a tabela livro_autor
+8)  Criar a tabela livro_tag
+9)  Criar a tabela socio
+10) Criar a tabela locacao
+11) Criar a tabela locacao_livro
+12) Inserir 10 registros na tabela autor
+    Deve possuir um autor com nome de "José da Silva" e outro "Garry Kasparov"
+13) Inserir 10 registros na tabela categoria
+    Deve conter categoria Esportes
+14) Inserir 10 registros na tabela socio
+15) Inserir 6 registros na tabela tag
+16) Inserir 8 registros na tabela livro
+    Deve conter um livro com titulo: "Garry Kasparov: Meus grandes predecessores", a categoria deste livro deve ser Esportes
+17) Inserir 8 registros na tabela livro_autor
+    o Livro "Garry Kasparov: Meus grandes predecessores" deve ser do autor "Garry Kasparov"
+18) Inserir 5 registros na tabela livro_tag
+19) Inserir 10 registros na tabela locacao.
+    Deve possuir registros sem data de devoluçao e com data de devoluçao.
+    Deve possuir datas de retirada diferenciadas, sendo meses e até ano diferentes
+    Os registro que possuerem data de devoluçao, a mesma deve ser maior do que a data de retirada
+20) Inserir 10 registros na tabela locacao_livro
+21) Selecionar todos os registros que estão com a locação em aberto
+21) Selecionar todos os registros que o livro já foi devolvido
+22) Selecionar o nome do livro, nome do sócio, data de retirada, data de previão de devoluçao, data de devoluçao dos livros que foram locados e já devolvidos
+23) Selecionar o nome do autor, nome da categoria, nome da tag, nome do livro onde o autor é o "Garry Kasparov"
+
+
