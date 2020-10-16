@@ -1,22 +1,4 @@
-Exercicio
-
-    Criar um novo projeto de console
-
-    Na classe Program dentro do método Main
-    Solicitar ao usuário 2 numeros, convertendo os mesmo para o tipo double
-    Solicitar ao usuário a operação
-        "(+ Adição)--(- Subtração)--(* Multiplicação)--(/ Divisão))"
-
-    Utilizar a operação com o switch e retornar o resultado do cálculo
-
-    Caso a operação não esteja entre as solicitadas, 
-    informar que a operação é invalida.
-
-
-Resolução:
-
-
-using System;
+﻿using System;
 
 namespace exercicio_console_calculadora
 {
