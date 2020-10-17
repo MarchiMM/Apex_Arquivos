@@ -1,0 +1,47 @@
+1)  Pergunte ao usuário do sistema qual time ganhou a 
+    última copa do mundo de futebol. 
+    Dê a ele 3 opções, dentro dessas uma deve ser a verdadeira. 
+    Caso o usuário acerte, escreva “Acertou” caso contrário, 
+    “Errou - tente novamente”. 
+    Não pare o programa até que ele acerte a resposta.
+    1 - Argentina | 2 - Brasil | 3 - França
+
+------------------------------------------------------
+
+2)  Faça um programa que escreva a tabuada de 5, utilizando o laço for.
+
+------------------------------------------------------
+
+3)  Faça um programa que escreva a tabuada de 3, utilizando o laço while.
+
+------------------------------------------------------
+
+4)  Solicite ao usuário qual tabuada ele deseja calcular.
+    Escreva a tabuada com o laço for.
+
+------------------------------------------------------
+
+5)  Escreva a tabuada de 1 até 10 utilizando laço for
+
+------------------------------------------------------
+
+6)  A empresa ABC possui 5 funcionários.
+    Ela quer saber entre os funcionários qual é o que possui 
+    maior peso e qual é o que possui maior altura.
+
+    Faça um programa que leia o nome do funcionario, seu peso e sua altura.
+
+    Para ler estas informações utilize o laço de repetiçao "for".
+    
+    for (int indice = 1; indice <= 5; indice++)
+    {
+    }
+
+    Durante a execução do laço, faça as verificaçoes necessárias para maior 
+    peso e maior altura. 
+    Com isso pode ser armazenado o nome do funcionario.
+
+    Ao final do laço, mostre a mensagem:
+
+    $"Funcionário {nomeDoFuncionarioComMaiorPeso} possui o maior peso {maiorPeso}"
+    $"Funcionário {nomeDoFuncionarioComMaiorAltura} possui a maior altura {maiorAltura}"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_01\\exercicio_console_calculadora\\exercicio_console_calculadora.csproj": {}
+    "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_02\\projeto02\\projeto02.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_01\\exercicio_console_calculadora\\exercicio_console_calculadora.csproj": {
+    "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_02\\projeto02\\projeto02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_01\\exercicio_console_calculadora\\exercicio_console_calculadora.csproj",
-        "projectName": "exercicio_console_calculadora",
-        "projectPath": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_01\\exercicio_console_calculadora\\exercicio_console_calculadora.csproj",
+        "projectUniqueName": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_02\\projeto02\\projeto02.csproj",
+        "projectName": "projeto02",
+        "projectPath": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_02\\projeto02\\projeto02.csproj",
         "packagesPath": "C:\\Users\\Apex02\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_01\\exercicio_console_calculadora\\obj\\",
+        "outputPath": "C:\\Users\\Apex02\\Desktop\\Matheus MMoro\\Apex\\C# Fundamentos\\aula_02\\projeto02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Apex02\\AppData\\Roaming\\NuGet\\NuGet.Config",
