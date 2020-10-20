@@ -10,6 +10,12 @@ public static string ReadLine();
 
 ------------------------------------------------------------
 
+Ctrl + Espaço
+
+Mostra todas as variáveis no código
+
+------------------------------------------------------------
+
 INTERPOLAÇÃO DE STRINGS C#:
 
 int numero1 = 10;
