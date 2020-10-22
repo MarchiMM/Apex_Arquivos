@@ -6,20 +6,22 @@ namespace array_multi_dimensional_exercicio
     {
         static void Main(string[] args)
         {
-            // string[,] pessoas = new string[5, 2];
+            /*
+                string[,] pessoas = new string[5, 2];
 
-            // for (int i = 0; i < pessoas.GetLength(0); i++)
-            // {
-            //     Console.Write($"Informe o nome da {i + 1}ª pessoa: ");
-            //     pessoas[i, 0] = Console.ReadLine();
-            //     Console.Write($"Informe a idade da {i + 1}ª pessoa: ");
-            //     pessoas[i, 1] = Console.ReadLine();
-            // }
+                for (int i = 0; i < pessoas.GetLength(0); i++)
+                {
+                    Console.Write($"Informe o nome da {i + 1}ª pessoa: ");
+                    pessoas[i, 0] = Console.ReadLine();
+                    Console.Write($"Informe a idade da {i + 1}ª pessoa: ");
+                    pessoas[i, 1] = Console.ReadLine();
+                }
 
-            // for (int i = 0; i < pessoas.GetLength(0); i++)
-            // {
-            //     Console.WriteLine($"{pessoas[i, 0]} - {pessoas[i, 1]}");
-            // }
+                for (int i = 0; i < pessoas.GetLength(0); i++)
+                {
+                    Console.WriteLine($"{pessoas[i, 0]} - {pessoas[i, 1]}");
+                }
+            */
 
             string[,] pessoas = ObterListaDePessoasPreenchida();
             escreverListaDePessoas(pessoas);
