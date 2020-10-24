@@ -25,21 +25,23 @@ namespace array_multi_dimensional_exercicio
 
             string[,] pessoas = ObterListaDePessoasPreenchida();
             escreverListaDePessoas(pessoas);
+            // OU:
+            // escreverListaDePessoas(ObterListaDePessoasPreenchida());
         }
 
         public static string[,] ObterListaDePessoasPreenchida()
         {
-            string[,] pessoas = new string[5, 2];
+            string[,] listaPessoas = new string[5, 2];
 
-            for (int i = 0; i < pessoas.GetLength(0); i++)
+            for (int i = 0; i < listaPessoas.GetLength(0); i++)
             {
                 Console.Write($"Informe o nome da {i + 1}ª pessoa: ");
-                pessoas[i, 0] = Console.ReadLine();
+                listaPessoas[i, 0] = Console.ReadLine();
                 Console.Write($"Informe a idade da {i + 1}ª pessoa: ");
-                pessoas[i, 1] = Console.ReadLine();
+                listaPessoas[i, 1] = Console.ReadLine();
             }
 
-            return pessoas;
+            return listaPessoas;
         }
 
         public static void escreverListaDePessoas (string[,] listaBidimensionalPessoas)
