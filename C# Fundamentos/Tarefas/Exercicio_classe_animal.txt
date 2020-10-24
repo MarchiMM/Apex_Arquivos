@@ -1,0 +1,12 @@
+1)  
+    a)  Criar a classe Animal que contenha os atributos:
+        Nome    string
+        Idade   int
+        Tipo    string
+    b)  Criar um construtor que recebe por parâmetro os valores para 
+        os atributos da classe.
+    c)  Criar uma função que retorne uma string contendo a mensagem:
+        $"O {this.Tipo} tem o nome {this.Nome} e idade {this.Idade}"
+    d)  Na classe Program no metodo Main
+        Crie um objeto Animal que seja do tipo cachorro.
+        Chame a funcao que retorne a descricao do animal
