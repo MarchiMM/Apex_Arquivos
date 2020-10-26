@@ -1,0 +1,17 @@
+Exercicios array multidimensional:
+
+1)  Com o array e variaveis definidos abaixo:
+    int[,] listaNumeros = new int[4, 4] { { 1, 2, 3, 40 }, { 3, 4, 10, 30 }, { 5, 6, 35, 67 }, { 7, 8, 90, 91 } };
+    int maiorDaLinha = 0;
+    double mediaColuna = 0;
+
+    Faça um programa que calcule:
+     a) O Maior numero de cada linha
+     b) A média de valor de cada coluna
+
+2)  Escreva um programa que solicite ao usuário 10 valores do tipo double e armazene-os em uma matriz de dimensões 2x5.
+    Ao final exibiba:
+        $"Valor: {valorQueEstaNoArray} está na linha {linhaOndeEstaOValor} e na coluna {colunaOndeEstaOValor}"
+
+3)  Escreva um programa que solicite ao usuario 8 valores do tipo int e armazene-os em uma matriz de dimensões 2, 4.
+    Ao final exiba a média destes valores.
