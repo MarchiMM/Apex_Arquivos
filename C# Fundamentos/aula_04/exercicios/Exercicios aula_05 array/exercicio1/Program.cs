@@ -13,7 +13,7 @@ namespace exercicio1
                 { 5, 6, 35, 67 },
                 { 7, 8, 90, 91 }
             };
-
+            EscreverMaiorNumeroDeCadaLinha(listaNumeros);
             EscreverMediaNumeroDeCadaColuna(listaNumeros);
         }
 
@@ -40,17 +40,16 @@ namespace exercicio1
             double somaColuna = 0;
             double mediaColuna = 0;
 
-            for (int iL = 0; iL < listaDeNumeros.GetLength(0); iL++)
+            for (int iC = 0; iC < listaDeNumeros.GetLength(1); iC++)
             {
-                for (int iC = 0; iC < listaDeNumeros.GetLength(1); iC++)
+                for (int iL = 0; iL < listaDeNumeros.GetLength(0); iL++)
                 {
                     somaColuna += listaDeNumeros[iL, iC];
                 }
-                mediaColuna = somaColuna / listaDeNumeros.GetLength(1);
-                Console.WriteLine($"Média da coluna {iL + 1}: {mediaColuna}");
+                mediaColuna = somaColuna / listaDeNumeros.GetLength(0);
+                Console.WriteLine($"Média da coluna {iC + 1}: {mediaColuna}");
                 somaColuna = 0;
                 mediaColuna = 0;
-                // dando errado
             }
         }
     }

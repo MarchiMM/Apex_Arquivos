@@ -9,6 +9,9 @@ instância -> dar um "new" em algo, criar um objeto;
 static -> não há necessidade da instância da classe para
 acessar métodos, funções e propriedades.
 
+MÉTODO ESTÁTICO: Classe.Método
+MÉTODO NÃO-ESTÁTICO: objInstanciado.Método
+
 ------------------------------------------------------------
 
 O que são classes e objetos?
@@ -66,3 +69,7 @@ Herança
 
 ------------------------------------------------------------
 
+Atalhos interessantes:
+
+Escrever "prop" (para propriedade da classe) e apertar TAB várias vezes
+Escrever "ctor" (para construtor) e apertar TAB várias vezes

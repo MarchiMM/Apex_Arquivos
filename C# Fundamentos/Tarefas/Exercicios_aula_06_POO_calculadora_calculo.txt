@@ -1,0 +1,25 @@
+a)  Criar uma classe chamada CalculoServico que irá conter as propriedades:
+        Numero1     double
+        Numero2     double
+    b)  Criar um construtor que recebe por parâmetro os valores para 
+        os atributos da classe
+    c)  Criar as seguintes funções:
+        -   Somar() : double
+        -   Subtrair() : double
+        -   Multiplicar() : double
+        -   Dividir() : double
+    d)  Criar uma classe chamada Calculadora que contenha as propriedades:
+        Numero1     double
+        Numero2     double
+        Operacao    string
+    e)  Na classe Calculadora criar a função:
+        -   EfetuarCalculo(): double
+        1)  A funcão EfetuarCalculo deve instanciar um objeto 
+            CalculoServico(this.Numero1, this.Numero2)
+        2)  A funcão EfetuarCalculo deve ter um switch(Operação) que retorne a 
+            funcao correspondente do CalculoServico
+    f)  Na classe Program no método Main:
+        Solicitar ao usuario 2 numeros e a operação
+        Instanciar um objeto da classe Calculadora
+        Chamar a funcão EfetuarCalculo
+        Apresentar o resultado no console
