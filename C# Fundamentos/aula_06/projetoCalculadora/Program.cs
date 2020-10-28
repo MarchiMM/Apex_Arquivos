@@ -8,15 +8,15 @@ namespace projetoCalculadora
         static void Main(string[] args)
         {
             Console.Write("Informe o primeiro número: ");
-            double n1 = Convert.ToDouble(Console.ReadLine());
+            double num1 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Informe o segundo número: ");
-            double n2 = Convert.ToDouble(Console.ReadLine());
+            double num2 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Informe a operação (+, -, *, /): ");
             string operacao = Console.ReadLine();
 
-            Calculadora objCalculadora = new Calculadora(n1, n2, operacao);
+            Calculadora objCalculadora = new Calculadora(num1, num2, operacao);
 
             Console.WriteLine($"O resultado é: {objCalculadora.EfetuarCalculo()}");
         }

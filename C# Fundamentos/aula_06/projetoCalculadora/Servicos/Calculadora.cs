@@ -18,16 +18,22 @@ namespace projetoCalculadora.Servicos
         public double EfetuarCalculo()
         {
             CalculoServico objCalculo = new CalculoServico(this.Numero1, this.Numero2);
-            double resultado = 0;
+            // double resultado = 0;
             switch (this.Operacao)
             {
-                case "+": resultado = objCalculo.Somar(); break;
-                case "-": resultado = objCalculo.Subtrair(); break;
-                case "*": resultado = objCalculo.Multiplicar(); break;
-                case "/": resultado = objCalculo.Dividir(); break;
-                default: break;
+                // case "+": resultado = objCalculo.Somar(); break;
+                // case "-": resultado = objCalculo.Subtrair(); break;
+                // case "*": resultado = objCalculo.Multiplicar(); break;
+                // case "/": resultado = objCalculo.Dividir(); break;
+                // default: break;
+                // OU:
+                case "+": return objCalculo.Somar();
+                case "-": return objCalculo.Subtrair();
+                case "*": return objCalculo.Multiplicar();
+                case "/": return objCalculo.Dividir();
+                default: return 0;
             }
-            return resultado;
+            // return resultado;
         }
     }
 }
