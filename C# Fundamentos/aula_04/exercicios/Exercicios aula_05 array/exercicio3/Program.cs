@@ -6,13 +6,13 @@ namespace exercicio3
     {
         static void Main(string[] args)
         {
-            int [,] listaNumeros = new int [2, 4];
-            ObterListaDeNumerosPreenchidaPeloUsuario(listaNumeros);
+            int [,] listaNumeros = ObterListaDeNumerosPreenchidaPeloUsuario();
             EscreverMediaDaListaDeNumeros(ObterMediaDaListaDeNumeros(listaNumeros));
         }
 
         public static int[,] ObterListaDeNumerosPreenchidaPeloUsuario(int [,] listaDeNumeros)
         {
+            int [,] listaNumeros = new int [2, 4];
             for (int l = 0; l < listaDeNumeros.GetLength(0); l++)
             {
                 for (int c = 0; c < listaDeNumeros.GetLength(1); c++)
@@ -35,7 +35,8 @@ namespace exercicio3
                     somaDosNumeros += listaDeNumeros[l, c];
                 }
             }
-            return somaDosNumeros / (listaDeNumeros.GetLength(0) + 1 + listaDeNumeros.GetLength(1) + 1);
+            // return somaDosNumeros / (listaDeNumeros.GetLength(0) + 1 + listaDeNumeros.GetLength(1) + 1);
+            return somaDosNumeros / (listaDeNumeros.Length);
         }
 
         public static void EscreverMediaDaListaDeNumeros(double media)
