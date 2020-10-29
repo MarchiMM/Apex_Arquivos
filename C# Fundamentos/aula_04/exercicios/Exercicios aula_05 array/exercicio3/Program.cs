@@ -10,9 +10,9 @@ namespace exercicio3
             EscreverMediaDaListaDeNumeros(ObterMediaDaListaDeNumeros(listaNumeros));
         }
 
-        public static int[,] ObterListaDeNumerosPreenchidaPeloUsuario(int [,] listaDeNumeros)
+        public static int[,] ObterListaDeNumerosPreenchidaPeloUsuario()
         {
-            int [,] listaNumeros = new int [2, 4];
+            int [,] listaDeNumeros = new int [2, 4];
             for (int l = 0; l < listaDeNumeros.GetLength(0); l++)
             {
                 for (int c = 0; c < listaDeNumeros.GetLength(1); c++)

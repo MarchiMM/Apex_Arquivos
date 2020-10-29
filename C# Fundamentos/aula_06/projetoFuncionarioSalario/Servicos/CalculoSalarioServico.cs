@@ -1,3 +1,5 @@
+using System;
+
 namespace projetoFuncionarioSalario.Servicos
 {
     public class CalculoSalarioServico
