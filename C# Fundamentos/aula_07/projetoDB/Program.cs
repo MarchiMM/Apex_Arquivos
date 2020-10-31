@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace projetoBD
+namespace projetoDB
 {
     class Program
     {
