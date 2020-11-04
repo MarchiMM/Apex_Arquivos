@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\projetoClienteProduto\\projetoClienteProduto.csproj",
-      "projectName": "projetoClienteProduto",
-      "projectPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\projetoClienteProduto\\projetoClienteProduto.csproj",
+      "projectUniqueName": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\MenorNumero\\MenorNumero.csproj",
+      "projectName": "MenorNumero",
+      "projectPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\MenorNumero\\MenorNumero.csproj",
       "packagesPath": "C:\\Users\\matmm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\projetoClienteProduto\\obj\\",
+      "outputPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\C# Fundamentos\\aula_07\\Exercicios\\MenorNumero\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matmm\\AppData\\Roaming\\NuGet\\NuGet.Config",

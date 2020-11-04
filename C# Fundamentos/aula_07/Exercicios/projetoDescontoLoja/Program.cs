@@ -16,7 +16,6 @@ namespace projetoDescontoLoja
             Loja objLoja = new Loja(produto, formaPagamento, valor);
 
             Console.WriteLine(objLoja.ObterMensagemDesconto());
-
         }
     }
 }
