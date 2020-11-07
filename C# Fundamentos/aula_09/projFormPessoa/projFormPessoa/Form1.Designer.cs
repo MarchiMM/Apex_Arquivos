@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPessoa));
             this.pnlTopo = new System.Windows.Forms.Panel();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.lblTopo = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.tabFuncionario = new System.Windows.Forms.TabControl();
             this.tabPageLista = new System.Windows.Forms.TabPage();
             this.pnlListaTabela = new System.Windows.Forms.Panel();
             this.gridFuncionario = new System.Windows.Forms.DataGridView();
             this.pnlListaFiltro = new System.Windows.Forms.Panel();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.txbFiltroId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.tabPageCadastro = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
             this.mtextCpf = new System.Windows.Forms.MaskedTextBox();
@@ -61,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionario)).BeginInit();
             this.pnlListaFiltro.SuspendLayout();
             this.tabPageCadastro.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,12 +68,37 @@
             // 
             this.pnlTopo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTopo.Controls.Add(this.btnNovo);
+            this.pnlTopo.Controls.Add(this.btnAtualizar);
             this.pnlTopo.Controls.Add(this.lblTopo);
+            this.pnlTopo.Controls.Add(this.btnExcluir);
+            this.pnlTopo.Controls.Add(this.btnSalvar);
             this.pnlTopo.Location = new System.Drawing.Point(12, 12);
             this.pnlTopo.Margin = new System.Windows.Forms.Padding(1);
             this.pnlTopo.Name = "pnlTopo";
-            this.pnlTopo.Size = new System.Drawing.Size(776, 57);
+            this.pnlTopo.Size = new System.Drawing.Size(776, 45);
             this.pnlTopo.TabIndex = 0;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.Location = new System.Drawing.Point(7, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(40, 40);
+            this.btnNovo.TabIndex = 9;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
+            this.btnAtualizar.Location = new System.Drawing.Point(99, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(40, 40);
+            this.btnAtualizar.TabIndex = 2;
+            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // lblTopo
             // 
@@ -83,21 +107,45 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTopo.AutoSize = true;
             this.lblTopo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTopo.Location = new System.Drawing.Point(219, 10);
+            this.lblTopo.Location = new System.Drawing.Point(469, 0);
             this.lblTopo.Name = "lblTopo";
             this.lblTopo.Size = new System.Drawing.Size(306, 37);
             this.lblTopo.TabIndex = 0;
             this.lblTopo.Text = "Cadastro de Funcionário";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(145, 3);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(40, 40);
+            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.Location = new System.Drawing.Point(53, 3);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(40, 40);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // tabFuncionario
             // 
             this.tabFuncionario.Controls.Add(this.tabPageLista);
             this.tabFuncionario.Controls.Add(this.tabPageCadastro);
-            this.tabFuncionario.Location = new System.Drawing.Point(12, 73);
+            this.tabFuncionario.Location = new System.Drawing.Point(12, 61);
             this.tabFuncionario.Name = "tabFuncionario";
             this.tabFuncionario.SelectedIndex = 0;
-            this.tabFuncionario.Size = new System.Drawing.Size(775, 365);
+            this.tabFuncionario.Size = new System.Drawing.Size(775, 377);
             this.tabFuncionario.TabIndex = 1;
+            this.tabFuncionario.Tag = "";
+            this.tabFuncionario.SelectedIndexChanged += new System.EventHandler(this.tabFuncionario_SelectedIndexChanged);
             // 
             // tabPageLista
             // 
@@ -106,7 +154,7 @@
             this.tabPageLista.Location = new System.Drawing.Point(4, 24);
             this.tabPageLista.Name = "tabPageLista";
             this.tabPageLista.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLista.Size = new System.Drawing.Size(767, 337);
+            this.tabPageLista.Size = new System.Drawing.Size(767, 349);
             this.tabPageLista.TabIndex = 0;
             this.tabPageLista.Text = "Lista";
             this.tabPageLista.UseVisualStyleBackColor = true;
@@ -130,7 +178,6 @@
             // 
             // pnlListaFiltro
             // 
-            this.pnlListaFiltro.Controls.Add(this.btnSelecionar);
             this.pnlListaFiltro.Controls.Add(this.btnFiltrar);
             this.pnlListaFiltro.Controls.Add(this.txbFiltroId);
             this.pnlListaFiltro.Controls.Add(this.lblId);
@@ -138,16 +185,6 @@
             this.pnlListaFiltro.Name = "pnlListaFiltro";
             this.pnlListaFiltro.Size = new System.Drawing.Size(761, 48);
             this.pnlListaFiltro.TabIndex = 0;
-            // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Location = new System.Drawing.Point(432, 10);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(94, 24);
-            this.btnSelecionar.TabIndex = 3;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // btnFiltrar
             // 
@@ -182,52 +219,17 @@
             this.tabPageCadastro.Location = new System.Drawing.Point(4, 24);
             this.tabPageCadastro.Name = "tabPageCadastro";
             this.tabPageCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCadastro.Size = new System.Drawing.Size(767, 337);
+            this.tabPageCadastro.Size = new System.Drawing.Size(767, 349);
             this.tabPageCadastro.TabIndex = 1;
             this.tabPageCadastro.Text = "Cadastro";
             this.tabPageCadastro.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnAtualizar);
-            this.panel2.Controls.Add(this.btnExcluir);
-            this.panel2.Controls.Add(this.btnSalvar);
             this.panel2.Location = new System.Drawing.Point(578, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 331);
             this.panel2.TabIndex = 1;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(52, 189);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(90, 40);
-            this.btnAtualizar.TabIndex = 2;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(52, 143);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnExcluir.TabIndex = 1;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(52, 53);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 84);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // panel1
             // 
@@ -248,7 +250,7 @@
             // 
             this.dtpDataNasc.Location = new System.Drawing.Point(85, 165);
             this.dtpDataNasc.Name = "dtpDataNasc";
-            this.dtpDataNasc.Size = new System.Drawing.Size(200, 23);
+            this.dtpDataNasc.Size = new System.Drawing.Size(238, 23);
             this.dtpDataNasc.TabIndex = 8;
             // 
             // mtextCpf
@@ -256,7 +258,7 @@
             this.mtextCpf.Location = new System.Drawing.Point(85, 114);
             this.mtextCpf.Mask = "999,999,999-99";
             this.mtextCpf.Name = "mtextCpf";
-            this.mtextCpf.Size = new System.Drawing.Size(200, 23);
+            this.mtextCpf.Size = new System.Drawing.Size(238, 23);
             this.mtextCpf.TabIndex = 7;
             // 
             // textNome
@@ -271,7 +273,7 @@
             this.textId.Enabled = false;
             this.textId.Location = new System.Drawing.Point(85, 21);
             this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(200, 23);
+            this.textId.Size = new System.Drawing.Size(238, 23);
             this.textId.TabIndex = 4;
             // 
             // lblDataNasc
@@ -321,6 +323,7 @@
             this.Name = "frmPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário PESSOA >>>";
+            this.Load += new System.EventHandler(this.frmPessoa_Load);
             this.pnlTopo.ResumeLayout(false);
             this.pnlTopo.PerformLayout();
             this.tabFuncionario.ResumeLayout(false);
@@ -330,7 +333,6 @@
             this.pnlListaFiltro.ResumeLayout(false);
             this.pnlListaFiltro.PerformLayout();
             this.tabPageCadastro.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -345,7 +347,6 @@
         private System.Windows.Forms.TabPage tabPageLista;
         private System.Windows.Forms.Panel pnlListaTabela;
         private System.Windows.Forms.Panel pnlListaFiltro;
-        private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.TextBox txbFiltroId;
         private System.Windows.Forms.Label lblId;
@@ -364,6 +365,7 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCadastroId;
         private System.Windows.Forms.DataGridView gridFuncionario;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
 
