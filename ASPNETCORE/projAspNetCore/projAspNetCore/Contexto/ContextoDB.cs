@@ -7,7 +7,6 @@ namespace projAspNetCore.Contexto
     {
         public ContextoDB(DbContextOptions<ContextoDB> opcoes) : base(opcoes)
         {
-
         }
 
         public DbSet<Funcionario> Funcionario { get; set; }
