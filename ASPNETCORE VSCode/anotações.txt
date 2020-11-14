@@ -1,0 +1,20 @@
+Comandos
+
+dotnet new webapi -n WebAPI1
+cd WebAPI1
+dotnet build
+
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+dotnet tool install --global dotnet-ef
+dotnet ef
+dotnet ef migrations add CreateInitial
+dotnet ef database update
+
+Criar classe no Model
+Adicionar ao contexto
+Executar Comandos
+Criar classe controller
