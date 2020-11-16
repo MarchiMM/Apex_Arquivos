@@ -39,6 +39,8 @@ namespace projetoDB
             {
                 conexao.Close(); // -> Fecha a conexão
             }
+
+            Console.WriteLine()
         }
     }
 }
