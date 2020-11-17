@@ -1,6 +1,5 @@
 ﻿using System;
 using ExercicioComplementar.Modelos;
-using ExercicioComplementar.Repositorio;
 using ExercicioComplementar.Servicos.ClienteRepositorio;
 using ExercicioComplementar.Servicos.ProdutoRepositorio;
 

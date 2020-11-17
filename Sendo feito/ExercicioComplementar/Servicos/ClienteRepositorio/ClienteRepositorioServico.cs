@@ -33,6 +33,9 @@ namespace ExercicioComplementar.Servicos.ClienteRepositorio
         }
         public string ObterClienteEListaDeProdutos(int idCliente, ProdutoRepositorioServico produtoServico)
         {
+            // UTILIZAR STRINGBUILDER E FOREACH
+            // sb.Append ($"\n");
+
             return $"-------------------------------------------------------\n" + 
                    $"CLIENTE\n" + 
                    $"-------------------------------------------------------\n" + 
@@ -40,7 +43,7 @@ namespace ExercicioComplementar.Servicos.ClienteRepositorio
                    $"-------------------------------------------------------\n" + 
                    $"PRODUTOS\n" + 
                    $"-------------------------------------------------------\n" + 
-                   $"**** ID: {produtoServico.ObterPeloIdDoCliente(idCliente).ForEach(p => p.Id)}" + 
+                   $"**** ID: {produtoServico.ObterPeloIdDoCliente(idCliente)}" + 
                    $"-------------------------------------------------------\n";
         }
     }
