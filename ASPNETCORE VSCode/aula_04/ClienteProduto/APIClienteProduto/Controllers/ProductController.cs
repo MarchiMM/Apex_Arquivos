@@ -51,7 +51,7 @@ namespace APIClienteProduto.Controllers
         {
             try
             {
-                var result = await this._repositoryProduct.GetByClientIdAsync(clientId, true);
+                var result = await this._repositoryProduct.GetByClientIdAsync(clientId);
                 return Ok(result);
             }
             catch (Exception ex)

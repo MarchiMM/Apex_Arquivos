@@ -7,6 +7,6 @@ namespace APIClienteProduto.Data.Repository.Interfaces
     {
         Task<Product[]> GetAllAsync();
         Task<Product> GetByIdAsync(int productId);
-        Task<Product> GetByClientIdAsync(int clientId, bool includeProduct);
+        Task<Product[]> GetByClientIdAsync(int clientId);
     }
 }

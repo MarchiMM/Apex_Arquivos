@@ -34,20 +34,16 @@ namespace APIClienteProduto.Data.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<Product> GetByClientIdAsync(int clientId, bool includeProduct)
+        public async Task<Product[]> GetByClientIdAsync(int clientId)
         {
             IQueryable<Product> query = this._context.Product;
 
-            if (includeProduct)
-            {
-                query = query.Include(p => p.Client);
-            }
-
-            query = query.AsNoTracking()
+            query = query.Include(p => p.Client)
+                         .AsNoTracking()
                          .OrderBy(p => p.Id)
-                         .Where(p => p.Id == clientId);
+                         .Where(p => p.ClientId == clientId);
 
-            return await query.FirstOrDefaultAsync();
+            return await query.ToArrayAsync();
         }
     }
 }
