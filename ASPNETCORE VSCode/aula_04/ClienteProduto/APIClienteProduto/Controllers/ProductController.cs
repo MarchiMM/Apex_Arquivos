@@ -8,14 +8,13 @@ namespace APIClienteProduto.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ClientController : ControllerBase
+    public class ProductController : ControllerBase
     {
-        private readonly IRepositoryClient _repositoryClient;
+        private readonly IRepositoryProduct _repositoryProduct;
         private readonly IRepository _repository;
-
-        public ClientController(IRepositoryClient repositoryClient, IRepository repository)
+        public ProductController(IRepositoryProduct repositoryProduct, IRepository repository)
         {
-            this._repositoryClient = repositoryClient;
+            this._repositoryProduct = repositoryProduct;
             this._repository = repository;
         }
 
@@ -24,7 +23,7 @@ namespace APIClienteProduto.Controllers
         {
             try
             {
-                var result = await _repositoryClient.GetAllAsync(includeProduct: true);
+                var result = await _repositoryProduct.GetAllAsync();
                 return Ok(result);
             }
             catch (Exception ex)
@@ -33,12 +32,26 @@ namespace APIClienteProduto.Controllers
             }
         }
 
-        [HttpGet("{clientId}")]
-        public async Task<IActionResult> GetById(int clientId)
+        [HttpGet("{productId}")]
+        public async Task<IActionResult> GetById(int productId)
         {
             try
             {
-                var result = await this._repositoryClient.GetByIdAsync(clientId, true);
+                var result = await _repositoryProduct.GetByIdAsync(productId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }
+        }
+
+        [HttpGet("client={clientId}")]
+        public async Task<IActionResult> GetByClientId(int clientId)
+        {
+            try
+            {
+                var result = await this._repositoryProduct.GetByClientIdAsync(clientId, true);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -48,17 +61,17 @@ namespace APIClienteProduto.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Client modelClient)
+        public async Task<IActionResult> Post(Product modelProduct)
         {
             try
             {
-                _repository.Add(modelClient);
+                _repository.Add(modelProduct);
 
                 if (!await _repository.SaveChangesAsync())
                 {
-                    return BadRequest("Didn't save the client!");
+                    return BadRequest("Didn't save the product!");
                 }
-                return Ok(modelClient);
+                return Ok(modelProduct);
             }
             catch (Exception ex)
             {
@@ -66,25 +79,25 @@ namespace APIClienteProduto.Controllers
             }
         }
 
-        [HttpPut("{clientId}")]
-        public async Task<IActionResult> Put(int clientId, Client modelClient)
+        [HttpPut("{productId}")]
+        public async Task<IActionResult> Put(int productId, Product modelProduct)
         {
             try
             {
-                var client = await _repositoryClient.GetByIdAsync(clientId, false);
+                var product = await _repositoryProduct.GetByIdAsync(productId);
 
-                if (client == null)
+                if (product == null)
                 {
-                    return NotFound("Didn't find any client!");
+                    return NotFound("Didn't find any product!");
                 }
 
-                _repository.Update(modelClient);
+                _repository.Update(modelProduct);
 
                 if (!await _repository.SaveChangesAsync())
                 {
-                    return BadRequest("Didn't save the client!");
+                    return BadRequest("Didn't save the product!");
                 }
-                return Ok(modelClient);
+                return Ok(modelProduct);
             }
             catch (Exception ex)
             {
@@ -92,19 +105,19 @@ namespace APIClienteProduto.Controllers
             }
         }
 
-        [HttpDelete("{clientId}")]
-        public async Task<IActionResult> Delete(int clientId)
+        [HttpDelete("{productId}")]
+        public async Task<IActionResult> Delete (int productId)
         {
             try
             {
-                var client = await _repositoryClient.GetByIdAsync(clientId, false);
+                var product = await _repositoryProduct.GetByIdAsync(productId);
 
-                if (client == null)
+                if (product == null)
                 {
                     return NotFound();
                 }
 
-                _repository.Delete(client);
+                _repository.Delete(product);
 
                 if (!await _repository.SaveChangesAsync())
                 {

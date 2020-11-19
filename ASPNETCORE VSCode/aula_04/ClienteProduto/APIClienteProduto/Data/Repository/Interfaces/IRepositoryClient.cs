@@ -6,6 +6,6 @@ namespace APIClienteProduto.Data.Repository.Interfaces
     public interface IRepositoryClient
     {
         Task<Client[]> GetAllAsync(bool includeProduct);
-        Task<Client> GetByIdAsync(int clientId);
+        Task<Client> GetByIdAsync(int clientId, bool includeProduct);
     }
 }

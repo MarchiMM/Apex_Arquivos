@@ -1,5 +1,8 @@
 Comandos
 
+dotnet run
+dotnet watch run
+
 dotnet new webapi -n WebAPI1
 cd WebAPI1
 dotnet build
@@ -13,6 +16,11 @@ dotnet tool install --global dotnet-ef
 dotnet ef
 dotnet ef migrations add CreateInitial
 dotnet ef database update
+
+dotnet add package Newtonsoft.Json
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+(se der erro, tentar o próximo:)
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 3.1.7
 
 * Criar classe no Model
 * Adicionar ao contexto

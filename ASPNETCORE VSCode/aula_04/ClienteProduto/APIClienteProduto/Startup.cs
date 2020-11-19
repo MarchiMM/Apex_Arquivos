@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,13 @@ namespace APIClienteProduto
                 )
             );
 
+            services.AddControllers()
+                    .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = 
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddScoped<IRepositoryClient, RepositoryClient>();
+            services.AddScoped<IRepositoryProduct, RepositoryProduct>();
+            services.AddScoped<IRepository, RepositoryBase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

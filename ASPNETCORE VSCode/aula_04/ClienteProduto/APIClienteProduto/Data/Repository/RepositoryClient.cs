@@ -28,9 +28,15 @@ namespace APIClienteProduto.Data.Repository
             return await query.ToArrayAsync();
         }
 
-        public async Task<Client> GetByIdAsync(int clientId)
+        public async Task<Client> GetByIdAsync(int clientId, bool includeProduct)
         {
             IQueryable<Client> query = this._context.Client;
+
+            if (includeProduct)
+            {
+                query = query.Include(p => p.Products);
+            }
+
             query = query.AsNoTracking()
                          .OrderBy(c => c.Id)
                          .Where(c => c.Id == clientId);

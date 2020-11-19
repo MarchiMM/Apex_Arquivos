@@ -61,3 +61,6 @@ C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProd
 C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\obj\Debug\netcoreapp3.1\APIClienteProduto.dll
 C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\obj\Debug\netcoreapp3.1\APIClienteProduto.pdb
 C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\obj\Debug\netcoreapp3.1\APIClienteProduto.genruntimeconfig.cache
+C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Apex02\Desktop\Matheus MMoro\Apex\ASPNETCORE VSCode\aula_04\ClienteProduto\APIClienteProduto\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
