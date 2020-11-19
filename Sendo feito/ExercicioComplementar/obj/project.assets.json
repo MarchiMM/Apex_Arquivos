@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matmm\\Desktop\\Sendo feito\\ExercicioComplementar\\ExercicioComplementar.csproj",
+      "projectUniqueName": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\Sendo feito\\ExercicioComplementar\\ExercicioComplementar.csproj",
       "projectName": "ExercicioComplementar",
-      "projectPath": "C:\\Users\\matmm\\Desktop\\Sendo feito\\ExercicioComplementar\\ExercicioComplementar.csproj",
+      "projectPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\Sendo feito\\ExercicioComplementar\\ExercicioComplementar.csproj",
       "packagesPath": "C:\\Users\\matmm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matmm\\Desktop\\Sendo feito\\ExercicioComplementar\\obj\\",
+      "outputPath": "C:\\Users\\matmm\\Desktop\\Apex_Matheus-Marchi-Moro\\Sendo feito\\ExercicioComplementar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matmm\\AppData\\Roaming\\NuGet\\NuGet.Config",
