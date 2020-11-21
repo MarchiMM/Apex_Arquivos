@@ -1,3 +1,4 @@
+using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using ExercicioComplementar.Repositorio;
@@ -33,18 +34,21 @@ namespace ExercicioComplementar.Servicos.ClienteRepositorio
         }
         public string ObterClienteEListaDeProdutos(int idCliente, ProdutoRepositorioServico produtoServico)
         {
-            // UTILIZAR STRINGBUILDER E FOREACH
-            // sb.Append ($"\n");
-
-            return $"-------------------------------------------------------\n" + 
-                   $"CLIENTE\n" + 
-                   $"-------------------------------------------------------\n" + 
-                   $"**** ID: {ObterPeloId(idCliente).Id} - Nome: {ObterPeloId(idCliente).Nome}\n" + 
-                   $"-------------------------------------------------------\n" + 
-                   $"PRODUTOS\n" + 
-                   $"-------------------------------------------------------\n" + 
-                   $"**** ID: {produtoServico.ObterPeloIdDoCliente(idCliente)}" + 
-                   $"-------------------------------------------------------\n";
+            StringBuilder sb = new StringBuilder();
+            List<Produto> lp = produtoServico.ObterPeloIdDoCliente(idCliente);
+            sb.Append($"-------------------------------------------------------\n");
+            sb.Append($"CLIENTE\n");
+            sb.Append($"-------------------------------------------------------\n");
+            sb.Append($"**** ID: {ObterPeloId(idCliente).Id} - Nome: {ObterPeloId(idCliente).Nome}\n");
+            sb.Append($"-------------------------------------------------------\n");
+            sb.Append($"PRODUTOS\n");
+            sb.Append($"-------------------------------------------------------\n");
+            foreach (var item in lp)
+            {
+                sb.Append($"**** ID: {item.Id} - Descrição: {item.Descricao} - Valor: {item.Valor}\n");
+            }
+            sb.Append($"-------------------------------------------------------\n");
+            return $"{sb}";
         }
     }
 }
