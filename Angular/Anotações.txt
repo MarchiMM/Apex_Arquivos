@@ -34,3 +34,8 @@ https://getbootstrap.com/
 https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
   -> Para instalar o bootstrap desenvolvido para angular:
         npm install ngx-bootstrap --save
+	ng add ngx-bootstrap  --component dropdowns
+
+
+ctrl shif p
+	reident lines

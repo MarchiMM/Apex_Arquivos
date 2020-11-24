@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { ProfessoresComponent } from './professores/professores.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { NavComponent } from './nav/nav.component';
+import { TituloComponent } from './titulo/titulo.component';
 
 @NgModule({
   declarations: [	
@@ -16,11 +19,14 @@ import { NavComponent } from './nav/nav.component';
       ProfessoresComponent,
       PerfilComponent,
       PrincipalComponent,
-      NavComponent
+      NavComponent,
+      TituloComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
