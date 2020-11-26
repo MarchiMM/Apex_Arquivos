@@ -6,4 +6,7 @@ https://sourcemaking.com/refactoring/smells
 
 https://getbootstrap.com/
 
+https://valor-software.com/ngx-bootstrap/#/
+
 https://github.com/ColorlibHQ/AdminLTE/releases
+https://colorlib.com/wp/html-admin-templates/
