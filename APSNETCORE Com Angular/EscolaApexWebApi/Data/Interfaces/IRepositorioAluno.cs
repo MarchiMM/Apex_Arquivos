@@ -7,6 +7,6 @@ namespace EscolaApexWebApi.Data.Interfaces
     {
         Task<Aluno[]> ObterTodosAsync(bool incluirProfessor);
         Task<Aluno[]> ObterTodosPelaDisciplinaIdAsync(int disciplinaId, bool incluirDisciplina);
-        Task<Aluno[]> ObterAlunoPeloIdAsync(int alunoId, bool incluirProfessor);
+        Task<Aluno> ObterAlunoPeloIdAsync(int alunoId, bool incluirProfessor);
     }
 }
