@@ -92,3 +92,7 @@ https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
 
 ctrl shif p
 	reident lines
+
+-> Para gerar um novo serviço
+	ng generate service NomeDoServiço
+	ng g s NomeDoServiço
