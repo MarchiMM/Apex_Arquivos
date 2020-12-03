@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using EscolaApexWebApi.Data.Interfaces;
+using EscolaApexWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EscolaApexWebApi.Controllers
@@ -45,8 +46,81 @@ namespace EscolaApexWebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Ao obter a disciplina, ocorreu o erro: {ex.Message}");
+                return BadRequest($"Ao obter a disciplina pelo id, ocorreu o erro: {ex.Message}");
             }
+        }
+
+         [HttpPost]
+        public async Task<IActionResult> Post(Disciplina model)
+        {
+            try
+            {
+                _repositorio.Adicionar(model);
+
+                if(await _repositorio.EfetuouAlteracoesAsync())
+                {
+                    return Ok(model);
+                } 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ao salvar a disciplina, ocorreu o erro: {ex.Message}");
+            }
+
+            return BadRequest();
+        }
+
+        [HttpPut("disciplinaid={disciplinaId}")]
+        public async Task<IActionResult> Put(int disciplinaId, Disciplina model)
+        {
+            try
+            {
+                var disciplina = await _repositorioDisciplina.ObterDisciplinaPeloIdAsync(disciplinaId, incluirProfessor: false);
+                if(disciplina == null) 
+                {
+                    return NotFound();
+                }
+
+                _repositorio.Atualizar(model);
+
+                if(await _repositorio.EfetuouAlteracoesAsync())
+                {
+                    return Ok(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ao editar a disciplina, ocorreu o erro: {ex.Message}");
+            }
+
+            return BadRequest();
+        }
+
+        [HttpDelete("disciplinaid={disciplinaId}")]
+        public async Task<IActionResult> Delete(int disciplinaId)
+        {
+            try
+            {
+                var disciplina = await _repositorioDisciplina.ObterDisciplinaPeloIdAsync(disciplinaId, incluirProfessor: false);
+                if (disciplina == null) return NotFound();
+
+                _repositorio.Deletar(disciplina);
+
+                if(await _repositorio.EfetuouAlteracoesAsync())
+                {
+                    return Ok(
+                        new {
+                            message = "Deletado!"
+                        } 
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ao deletar a disciplina, ocorreu o erro: {ex.Message}");
+            }
+
+            return BadRequest();
         }
     }
 }

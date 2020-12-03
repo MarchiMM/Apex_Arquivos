@@ -3,40 +3,32 @@
   <div class="row">
     <div *ngIf="profSelected.id != 0" class="col-sm-6">
 
-      <div class="row">
-        <div class="mr-auto">
-          <app-titulo [titulo]="'Cód. Professor: ' + profSelected.id"></app-titulo>
-        </div>
-        <div class="mt-1">
-          <button class="btn btn-sm btn-outline-danger" (click)="voltar()">Voltar</button>
-        </div>
-      </div>
+      <app-titulo [titulo]="(profSelected.id === -1 ? 'Novo Professor': 'Código: ' + profSelected.id)">
+        <button class="btn btn-sm btn-outline-danger" (click)="voltar()">Voltar</button>
+      </app-titulo>
 
       <form [formGroup]="profForm" (submit)="onSubmit()">
         <div class="form-group">
           <label>Nome</label>
           <input type="text" formControlName="nome" class="form-control">
         </div>
-        <div class="form-group">
-          <label >Disciplina</label>
-          <input type="text" formControlName="disciplina" class="form-control">
-        </div>
         <div class="row form-group">
-          <button class="btn btn-success">Salvar</button>
+          <button class="btn btn-success" [disabled]="!profForm.valid">Salvar</button>
         </div>
       </form>
 
     </div>
 
     <div [ngClass]="{'col-sm-6': profSelected.id != 0, 'col-sm-12': profSelected.id == 0}">
-      <app-titulo [titulo]="tituloProfessor"></app-titulo>
+      <app-titulo [titulo]="tituloProfessor">
+        <button class="btn btn-sm btn-success" (click)="novoProfessor()">Cadastrar Professor</button>
+      </app-titulo>
       <table class="table table-hover">
         <thead class="thead-light">
           <tr>
             <th scope="col">Visualizar</th>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col">Disciplina</th>
             <th scope="col">Opções</th>
           </tr>
         </thead>
@@ -49,10 +41,9 @@
             </td>
             <th scoped="row">{{professor.id}}</th>
             <td>{{professor.nome}}</td>
-            <td>{{professor.disciplina}}</td>
             <td>
               <div class="btn-group">
-                <button class="text-dark btn btn-sm btn-outline-danger">Excluir</button>
+                <button (click)="excluirProfessor(professor)" class="text-dark btn btn-sm btn-outline-danger">Excluir</button>
               </div>
             </td>
           </tr>

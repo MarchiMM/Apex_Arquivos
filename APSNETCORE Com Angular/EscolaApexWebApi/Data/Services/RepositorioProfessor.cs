@@ -10,7 +10,7 @@ namespace EscolaApexWebApi.Data.Services
     {
         private readonly DataContext _contexto;
 
-        public RepositorioAluno(DataContext contexto)
+        public RepositorioProfessor(DataContext contexto)
         {
             this._contexto = contexto;
         }
@@ -34,15 +34,18 @@ namespace EscolaApexWebApi.Data.Services
         public async Task<Professor> ObterProfessorPeloIdAsync(int professorId, bool incluirAluno)
         {
             IQueryable<Professor> consulta = _contexto.Professor;
+
             if (incluirAluno)
             {
                 consulta = consulta.Include(p => p.Disciplinas)
                                    .ThenInclude(d => d.AlunosDisciplinas)
                                    .ThenInclude(ad => ad.Aluno);
             }
+
             consulta = consulta.AsNoTracking()
                                .OrderBy(p => p.Id)
                                .Where(p => p.Id == professorId);
+
             return await consulta.FirstOrDefaultAsync();
         }
 
@@ -50,12 +53,21 @@ namespace EscolaApexWebApi.Data.Services
         {
             IQueryable<Professor> consulta = _contexto.Professor;
 
-            // if (incluirDisciplina)
-            // {
-            //     consulta = consulta.Include(p => p.Disciplinas)
-            // }
+            if (incluirDisciplina)
+            {
+                consulta = consulta.Include(p => p.Disciplinas);
+            }
 
-            consulta = consulta;
+            consulta = consulta.AsNoTracking()
+                               .OrderBy(p => p.Id)
+                               .Where(
+                                   p => p.Disciplinas.Any(
+                                       d => d.AlunosDisciplinas.Any(
+                                           ad => ad.AlunoId == alunoId)
+                                       )
+                                   );
+                                // .Any só aceita listas (IEnumerable<>s), por isso não dá para
+                                // colocar "ad => ad.Aluno.Any(...)"
 
             return await consulta.ToArrayAsync();
         }

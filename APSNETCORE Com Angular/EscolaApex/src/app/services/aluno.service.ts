@@ -21,8 +21,12 @@ export class AlunoService {
     return this.http.post(this.urlBase, aluno);
   }
 
+  deletar(id: number) {
+    return this.http.delete(`${this.urlBase}/alunoid=${id}`);
+  }
 
-
-
+  editar(aluno: Aluno) {
+    return this.http.put(`${this.urlBase}/alunoid=${aluno.id}`, aluno);
+  }
 
 }

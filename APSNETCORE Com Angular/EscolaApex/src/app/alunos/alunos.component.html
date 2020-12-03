@@ -2,7 +2,7 @@
   <div class="row">
     <div *ngIf="alunoSelected.id != 0" class="col-sm-6">
 
-      <app-titulo [titulo]="(alunoSelected.id === 0 ? 'Novo Aluno': 'Código: ' + alunoSelected.id)">
+      <app-titulo [titulo]="(alunoSelected.id === -1 ? 'Novo Aluno': 'Código: ' + alunoSelected.id)">
         <button class="btn btn-sm btn-outline-danger" (click)="voltar()">Voltar</button>
       </app-titulo>
 
@@ -55,7 +55,7 @@
             <td>
               <div class="btn-group">
                 <button (click)="openModal(template)" class="text-dark btn btn-sm btn-outline-primary">Professores</button>
-                <button class="text-dark btn btn-sm btn-outline-danger">Excluir</button>
+                <button (click)="excluirAluno(aluno)" class="text-dark btn btn-sm btn-outline-danger">Excluir</button>
               </div>
             </td>
           </tr>

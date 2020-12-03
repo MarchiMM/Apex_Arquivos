@@ -10,39 +10,40 @@ namespace EscolaApexWebApi.Data.Services
     public class RepositorioDisciplina : IRepositorioDisciplina
     {
         private readonly DataContext _contexto;
-
         public RepositorioDisciplina(DataContext contexto)
         {
             this._contexto = contexto;
         }
-        public async Task<Disciplina> ObterDisciplinaPeloIdAsync(int disciplinaId, bool incluirProfessor)
-        {
-            IQueryable<Disciplina> consulta = _contexto.Disciplina;
-
-            if (incluirProfessor)
-            {
-                consulta = consulta.Include(d => d.Professor);
-            }
-
-            consulta = consulta.AsNoTracking()
-                               .OrderBy(d => d.Id)
-                               .Where(d => d.Id == disciplinaId);
-
-            return await consulta.FirstOrDefaultAsync();
-        }
 
         public async Task<Disciplina[]> ObterTodasAsync(bool incluirProfessor)
         {
-            IQueryable<Disciplina> consulta = _contexto.Disciplina;
+            IQueryable<Disciplina> query = _contexto.Disciplina;
 
             if (incluirProfessor)
             {
-                consulta = consulta.Include(d => d.Professor);
+                query = query.Include(pe => pe.Professor);
             }
 
-            consulta = consulta.AsNoTracking().OrderBy(d => d.Id);
+            query = query.AsNoTracking()
+                         .OrderBy(c => c.Id);
 
-            return await consulta.ToArrayAsync();
+            return await query.ToArrayAsync();
+        }
+
+        public async Task<Disciplina> ObterDisciplinaPeloIdAsync(int disciplinaId, bool incluirProfessor)
+        {
+            IQueryable<Disciplina> query = _contexto.Disciplina;
+
+            if (incluirProfessor)
+            {
+                query = query.Include(d => d.Professor);
+            }
+
+            query = query.AsNoTracking()
+                         .OrderBy(c => c.Id)
+                         .Where(c => c.Id == disciplinaId);
+            
+            return await query.FirstOrDefaultAsync();
         }
     }
 }

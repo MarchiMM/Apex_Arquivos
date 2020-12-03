@@ -55,17 +55,22 @@ namespace EscolaApexWebApi.Data.Services
 
         public async Task<Aluno> ObterAlunoPeloIdAsync(int alunoId, bool incluirProfessor)
         {
+            // Aui defino em qual tabela desejo efetuar a consulta
             IQueryable<Aluno> consulta = _contexto.Aluno;
-            // IQueryable - faz uma consulta em tal tabela na base de dados
+            // IQueryable - faz uma consulta em tal tabela na base de dados, com o tipo lista.
 
+            // aqui estou dizendo que irei utilizar INNER JOIN na minha consulta
+            // onde necessito ter as informações de FK que foram definidas nos Models
             if (incluirProfessor)
             {
                 consulta = consulta.Include(a => a.AlunosDisciplinas)
                                    .ThenInclude(ad => ad.Disciplina)
                                    .ThenInclude(d => d.Professor);
             }
-            // Este if é útil!
+            // Este if é útil para incluir o professor!
 
+            // aqui ordeno o resultado da consulta pelo ID do professor
+            // depois disso filtro na lista de professores o professor pelo ID
             consulta = consulta.AsNoTracking()
                                .OrderBy(a => a.Id)
                                .Where(a => a.Id == alunoId);

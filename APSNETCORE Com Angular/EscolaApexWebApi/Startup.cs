@@ -48,6 +48,8 @@ namespace EscolaApexWebApi
 
             services.AddScoped<IRepositorio, Repositorio>();
             services.AddScoped<IRepositorioAluno, RepositorioAluno>();
+            services.AddScoped<IRepositorioProfessor, RepositorioProfessor>();
+            services.AddScoped<IRepositorioDisciplina, RepositorioDisciplina>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
