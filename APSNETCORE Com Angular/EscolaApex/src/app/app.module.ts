@@ -14,6 +14,9 @@ import { NavComponent } from './nav/nav.component';
 import { TituloComponent } from './titulo/titulo.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
+import { DisciplinaComponent } from './disciplina/disciplina.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [	
@@ -23,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
       PerfilComponent,
       PrincipalComponent,
       NavComponent,
-      TituloComponent
+      TituloComponent,
+      DisciplinaComponent,
+      DialogComponent
    ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

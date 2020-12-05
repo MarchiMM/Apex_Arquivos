@@ -21,7 +21,7 @@ namespace EscolaApexWebApi.Data.Services
 
             if (incluirProfessor)
             {
-                query = query.Include(pe => pe.Professor);
+                query = query.Include(d => d.Professor);
             }
 
             query = query.AsNoTracking()
@@ -40,8 +40,8 @@ namespace EscolaApexWebApi.Data.Services
             }
 
             query = query.AsNoTracking()
-                         .OrderBy(c => c.Id)
-                         .Where(c => c.Id == disciplinaId);
+                         .OrderBy(d => d.Id)
+                         .Where(d => d.Id == disciplinaId);
             
             return await query.FirstOrDefaultAsync();
         }

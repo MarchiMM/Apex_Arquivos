@@ -36,6 +36,8 @@ https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
         npm install ngx-bootstrap --save
 	ng add ngx-bootstrap  --component dropdowns
 
-
 ctrl shif p
 	reident lines
+
+ng add @ng-bootstrap/ng-bootstrap
+  -> Pacote para o componente dialog

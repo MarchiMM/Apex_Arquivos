@@ -76,7 +76,7 @@ namespace EscolaApexWebApi.Controllers
             try
             {
                 var disciplina = await _repositorioDisciplina.ObterDisciplinaPeloIdAsync(disciplinaId, incluirProfessor: false);
-                if(disciplina == null) 
+                if(disciplina == null)
                 {
                     return NotFound();
                 }
