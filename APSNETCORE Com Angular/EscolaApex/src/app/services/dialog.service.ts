@@ -23,6 +23,6 @@ export class DialogService {
       modalRef.componentInstance.btnCancelText = btnCancelarTexto;
 
       return modalRef.result;
-    }
+  }
 
 }
