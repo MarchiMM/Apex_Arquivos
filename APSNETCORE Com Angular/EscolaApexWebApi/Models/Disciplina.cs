@@ -5,7 +5,6 @@ namespace EscolaApexWebApi.Models
     public class Disciplina
     {
         public Disciplina() {}
-
         public Disciplina(int id, string nome, int professorId)
         {
             this.Id = id;
